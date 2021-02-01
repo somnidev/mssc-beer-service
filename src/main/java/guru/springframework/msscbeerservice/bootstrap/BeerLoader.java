@@ -43,5 +43,6 @@ public class BeerLoader implements CommandLineRunner {
                     .build());
         }
         System.out.println(beerRepository.count());
+        beerRepository.findAll().forEach(b -> System.out.println(b.getId() + " " + b.getBeerName()));
     }
 }
